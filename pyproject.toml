@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finchat-agent"
+version = "0.1.0"
+description = "MVP financial Q&A agent over structured quarterly facts"
+requires-python = ">=3.11"
+dependencies = [
+  "langgraph>=0.2.0",
+  "langchain>=0.2.0",
+  "langsmith>=0.1.0",
+  "pydantic>=2.0",
+  "pandas>=2.0",
+  "pytest>=8.0",
+  "pyarrow>=14.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
